@@ -15,6 +15,8 @@ const initialState = {
   winner: null,
   openDialogue: false,
 };
+
+//This reducer handle the state changes based on the dispatch
 function reducer(state, Action) {
   switch (Action.type) {
     case "Make-move":
@@ -41,6 +43,8 @@ function reducer(state, Action) {
       };
   }
 }
+
+//This function calulates the winner
 function findWinner(board) {
   const lines = [
     [0, 1, 2],
